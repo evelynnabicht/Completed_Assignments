@@ -1,0 +1,19 @@
+section#contact-info p {
+  font-size: .8em;}
+​
+#personal-objective:hover { background: gold; }
+​
+​
+ul > li {
+  color: purple;
+  font-size: .8em;}
+​
+section.job { background-color: #e9e5dc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  width:200px
+  border: 25px;
+  padding: 10px;
+  border-radius: 25px;
+ padding-top: 20px;
+padding-bottom: 20px;}
