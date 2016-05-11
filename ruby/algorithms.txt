@@ -1,0 +1,29 @@
+
+RELEASE 0:
+
+- Each time robot walks into elevator:
+	- Until you hear a response, or until you have attempted three times:
+		-Ask human “Which floor would you like to go to?”
+		-wait 5 seconds for a response
+	-If no response heard:
+		-exit elevator
+
+RELEASE 1:
+
+WASHING LAUNDRY:
+
+- Each time laundry basket is full:
+	- Walk to laundry machines in garage
+	- Lift top of washer up
+	- Grab detergent from shelf above washer
+	- unscrew top of detergent bottle
+	- pour exactly 1/2 cup of detergent into cap of detergent bottle
+	- pour detergent into washer
+	- set washer to cold water cycle, large load by moving dial on front of 		washer
+- Until laundry basket is empty:
+	- pull clothes out of basket
+	- place in washer
+- Once laundry basket is empty:
+	- close top of washer
+	- walk away
+	- wait for washer to make buzzing sound, indicating laundry is done before 		returning to laundry area to begin drying process
