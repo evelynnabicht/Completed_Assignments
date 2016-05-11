@@ -1,0 +1,107 @@
+Variables
+1. What is a variable? Why might a programmer use a variable?
+
+Variables are the locations that Ruby uses to store information. Programmers use variables to store information pertaining to the code, so that they can use a variable if needed later instead of retyping all of the information.
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+
+Ruby will run the code right to left, processing the last_name code block first, and then the first_name code block, rendering the full_name variable. The result will be AbrahamLincoln.
+
+Data Types
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+
+string
+a string is simply just a string of words in between "" 
+I would use a string when telling ruby what to display to a user. Such as puts “hello world”.
+
+integer
+an integer is a whole number
+I would use an integer to hold numbers in my code. This could be through user input, like if the user enters in a number as the answer to a question.
+
+float
+float is the decimal version of an integer
+i would use floats for the same purpose as above, but to make my data more precise.
+
+nil
+a placeholder for something that may or may not be present
+I would use nil as a placeholder for something the user can answer, but can also choose to omit.
+
+boolean
+a boolean is a short-circuit operator that runs certain statements
+I use booleans to make if/else statements that process user input.
+
+Algorithms
+4. What is an algorithm?
+
+An algorithm is a program that processes information
+
+
+
+5. What are two common categories of algorithm in computer science? 
+
+Trees, sorting and searching, and hashing.
+
+
+
+Methods
+6. What is a method? Why might a programmer choose to use a method?
+
+Methods are used to clump together a bunch of different statements into a single unit. Programmers choose to use methods to make their code more readable and organized. Also, it saves a lot of time.
+
+
+
+7. Define the following terms as they relate to a method. 
+
+return value
+value that is rendered after running the method
+
+side effect
+an unintended return value
+
+parameter
+rules of a method
+
+argument
+subject of what the method processes
+
+implicit return
+a return value that is not specified 
+
+
+
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+
+Global scope: available throughout entire ruby script
+
+method scope: only available within a method
+
+Method scope is much smaller, and offers less data. Global scope can be accessed at any time in the program and make data much more available.
+
+
+
+Control Flow
+9. What is control flow? Why might a programmer choose to use flow control?
+
+Flow control is the process of running information through lines of code in a certain order. Programmers use flow control to narrow down information.
+
+
+
+10. Define the following terms as they relate to flow control.
+
+loop
+continuing program that keeps starting over after being executed
+
+if
+beginning of a conditional statement
+
+else
+executes when the “if” or “elsie” values are not fulfilled 
+
+elsif
+adds more options to conditional statement 
+
+while
+beginning of a loop
+
+until
+end of a loop
