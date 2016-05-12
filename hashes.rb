@@ -17,6 +17,10 @@ interior_design = {
   client_decor_theme: theme,
 }
 
+puts ""
+puts "Client's information:"
+interior_design.each {|x, y| puts "#{x}: #{y}" }
+
 #print client information
 p interior_design
 
@@ -30,18 +34,31 @@ def update_info(interior_design)
   return interior_design
 end
 
-
-
 #give user opportunity to make changes
 
-def changes(interior_design)
-puts "would you like to make any changes?"
-changes = gets.chomp
-  if changes != "no"
-    puts "What would you like to change?"
-    answer = changes.chomp
-    interior_design[answer] = gets.chomp
-  else
-    puts "Here is the client's current information:"
-    put interior_design
+def new_info(interior_design)
+puts "What item do you want to change, otherwise type 'no changes'"
+new_data = gets.chomp.downcase
+if new_data != "no changes"
+puts "What is the correct information?"
+answer = new_data.chomp
+interior_design[answer] = gets.chomp
+else
+puts interior_design
 end
+puts ""
+return interior_design
+end
+
+#call the methods
+
+updated_info = interior_design
+updated_info = new_info(updated_info)
+puts updated_info
+new_info(updated_info)
+updated_info = new_info(updated_info)
+puts updated_info
+puts ""
+puts "Client's information:"
+interior_design.each {|x, y| puts "#{x}: #{y}" }
+
