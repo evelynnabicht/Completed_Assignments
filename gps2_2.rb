@@ -61,10 +61,22 @@ end
 # steps:
 # output:
 
+
+#driver code
+food = grocery_list("carrots apples cereal pizza")
+add_item("cheese", food) 
+p food
+remove_item("carrots", food)
+p food
+update_quantity("apples", food, 69)
+update_quantity("pizza", food, 420)
+p food
+pretty_list(food)
+
 #driver code
 hash = {}
-list_string = "carrots apples cereal pizza"
-create_list(list_string, hash)
+list_string = ""
+grocery_list(list_string, hash)
 add_item("tomatoes", hash)
 add_item("lemonade" ,hash)
 add_item("onions" ,hash)
@@ -75,4 +87,5 @@ update_quantity("onions" ,hash, 1)
 update_quantity("icecream" ,hash, 4)
 remove_item("lemonade", hash)
 update_quantity("icecream", hash, 1)
-print_list(hash)
+
+p hash 
