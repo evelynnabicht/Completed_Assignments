@@ -84,3 +84,4 @@ santaclass.speak
 santaclass.eat_milk_and_cookies("snickerdoodle")
 santaclass.get_mad_at("Vixen")
 santa_reindeers(50)
+Status API Training Shop Blog About
