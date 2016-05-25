@@ -101,3 +101,14 @@ report
 
 #=======================================================================
 # Reflection Section
+
+# 1) The population density/population hash is INSIDE the state data hash that contains the state names
+
+# 2) Require relative needs the path for the other file that is relative to the one currently open (and links them). require 
+# includes files relative to the same directory.
+
+# 3) frequencies.each { |key, value| puts "#{key} #{value}" }
+
+# 4) I realized that the variables did not even need to be mentioned at all because of the particular scope of those specific variables.
+
+# 5) I was always very confused by the whole "hash within a hash" idea, but this exercise really helped me break the concept down into something I could understand.
