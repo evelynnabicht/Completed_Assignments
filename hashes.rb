@@ -6,7 +6,7 @@ children = gets.chomp.to_i
 puts "Age of client:"
 age = gets.chomp.to_i
 puts "Client's decor theme:"
-theme = gets.chomp
+theme = gets.chomp 
 
 
 #Hash that keeps the client's information
