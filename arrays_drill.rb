@@ -23,7 +23,7 @@ grocery_list << "salad"
 grocery_list << "milk"
 grocery_list << "cheetos"
 grocery_list << "juice"
-grocery_list << "coffee"
+grocery_list << "coffee" 
 
 p grocery_list
 
