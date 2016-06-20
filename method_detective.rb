@@ -6,7 +6,7 @@
 # committed the crime, add additional calls to prove it.
 
 "iNvEsTiGaTiOn".swapcase
- => “InVeStIgAtIoN”
+ => “InVeStIgAtIoN” 
 
 "zom".insert(2, 'o')
  => “zoom”
