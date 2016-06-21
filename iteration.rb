@@ -1,5 +1,5 @@
 def status_message
-  status1= "Great"
+  status1= "Great" 
   status2= "Wonderful"
   puts "I'm feeling #{status1} and #{status2} today!"
   yield(status1, status2)
