@@ -1,3 +1,7 @@
+# Evelyn Nabicht 
+
+
+
 shopping_mall = {
   forever_21: {
     real_name: 'Forever 21',
@@ -34,7 +38,7 @@ pac_sun: {
     "Accessories" => "Skateboard Trucks"
   },
   style: 
-    ["Clothing for skater kids who don't care about mainstream culture"]
+    ["Clothing for skater kids who don't care about mainstream culture"] 
     
   },
 }
