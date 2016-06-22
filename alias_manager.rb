@@ -28,7 +28,7 @@ def letter_swap(agent_name)
     end
   end
 
-  secret_name.join("").split.map {|ltr| ltr.capitalize}.join(" ").capitalize
+  secret_name.join("").split.map {|ltr| ltr.capitalize}.join('  ').capitalize
 
 end
 
