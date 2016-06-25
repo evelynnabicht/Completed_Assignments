@@ -1,17 +1,17 @@
-# PUPPY CLASS
+# Evelyn Nabicht
 
+# Release 0
 
-PUPPY BREED ------------------------
-Cavalier King Charles Spaniel
+# BREED -------------------
+# Pug
 
+# CHARACTERISTICS ------------------
+# Snout Length: almost non-existent
+# Size: small
+# Color: light brown
+# Tail: curly
 
-CHARACTERISTICS ----------------
-Friendly: yes
-Furry: yes
-Name: varies
-Color: varies
-
-BEHAVIOR -----------------------
-kisses
-playful
-sweet
+# BEHAVIOR ------------------------
+# Friendly: yes
+# Energy Level: 7
+# Good For Indoors: yes
