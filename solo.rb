@@ -1,97 +1,77 @@
+# EVELYN NABICHT
+# 6.4 Solo Challenge
 
-#  for entering tasks for future list manipulation
+#Release 0 - Design a class
+#3 attributes
+#3 methods (one with argument)
 
-# Has attributes (all read-writable) including:
-#   - state of mind
-#   - time est 
-#   - priority
-# Has methods including:
-#   Method repeats: accepts frequency of repetition, or acknowledges single action
-#   Method completes: gives success message
-#   Method descriptive: accepts verb and prompts to change 
-#         if not     
+#Release 1 -Write Your Class
+#Implement your class
+#include - att_reader, attr_accessor, and initialize
 
-class ToDo
-# attr_reader not used because all attributes are also writable
-attr_accessor :mindstate, :time_est, :priority, :name
+#Release 2 - Use Your Class in a Program
+#User interface via command line
+#User should be allowed to create as many instances of your class
+#Prompt user for each attribute and store these class instances into an array
+#when user indicates finished creating instances, loop through an array and print out the attributes of each instances
 
-def initialize(name)
-puts "Creating task called #{name}..."
-@name = name
-@time_est = 20
+class Movies
+  attr_reader :director
+  attr_accessor :genre, :runtime, :rated, :title, :criticreview
+
+#Method initilizing attributes
+  def initialize(genre, runtime, rated, title, director, criticreview)
+    @genre = genre
+    @runtime = runtime.to_f
+    @rated = rated
+    @title = title
+    @director = director
+    @criticreview = criticreview
+  end
+#method that takes an argument
+  def critics(reviews)
+    @criticreview = reviews
+  end
+#method to print results
+  def show_movies
+    puts "****************************"
+    puts "****************************"
+    puts "Movie Information: "
+    puts "Title: #{@title}"
+    puts "Rated: #{@rated}"
+    puts "Director: #{@director}"
+    puts "Runtime: #{@runtime} Hours"
+    puts "Reviews: #{@criticreview}"
+    puts "****************************"
+    puts "****************************"
+  end
 end
 
-def repeat(frequency)
-if frequency == "none"
-puts "Got it, it's a single action."
-else
-puts "This repeats: #{frequency}"
-end
-end
-
-def complete
-puts "Yay! Another check off - you're doing great!"
-end
-
-def descriptive
-puts "Quick double check: is this task name descriptive?"
-response = gets.chomp.downcase
-if response == "yes"
-puts "Excellent!"
-elsif response == "no"
-puts "Why don't you rename it now:"
-@name = gets.chomp
-puts "Super, it's been updated."
-end
+#driver codes to prompt user to input information
+movie_array = []
+answers = ""
+while answers != 'done'
+  puts "What is the name of the movie?"
+  movie_title = gets.chomp.capitalize
+  puts "What is the genre?"
+  movie_genre = gets.chomp.capitalize
+  puts "What is it rated?"
+  movie_rated = gets.chomp.upcase
+  puts "What is the runtime?(HH:MM)"
+  movie_runtime = gets.chomp.to_f
+  puts "Who is the director of this movie?"
+  movie_director = gets.chomp.capitalize
+  puts "Please critic this movie for all to see."
+  reviews = gets.chomp.to_s
+  movie_instance = Movies.new(movie_genre, movie_runtime, movie_rated, movie_title, movie_director, reviews)
+  puts "Would you like to add another movie? Otherwise, please type 'done' when you're finished."
+  answers = gets.chomp.downcase
+  movie_array << movie_instance
 end
 
-  # def time_est(minutes)
-  #   @time_est = minutes.to_i
-  # end
+#prints user input information by calling the method in the class 
+puts movie_array.each{|movie| movie.show_movies}
+Status API Training Shop Blog About
 
-end
+example_genders = ["female", "male", "gender fluid", "N/A", "don't know"]
 
-# Driver Code
-# task = ToDo.new("assignment 6-3")
-# 
-# task.repeat("weekly")
-# task.repeat("none")
-# task.complete
-# task.descriptive
-
-# Program
-# Prompt user to initialize X number of tasks
-#   - tell them to type "done" when complete
-# Prompt user to define attributes
-# Store instances in an array
-# When user enters "done", print their tasks with details  
-
-puts "Yay! You're planning out your week. Enter your tasks here."
-puts "When you've entered them all, just type \'done\'.\n"
-task_list = []
-while true
-puts "\nTask name:"
-name = gets.chomp
-if name == "done"
-break
-else
-end
-task = ToDo.new(name)
-task.descriptive
-
-puts "\nWhat state of mind should this task be done in?"
-task.mindstate= (gets.chomp)
-puts "\nHow many minutes should this take?"
-task.time_est= (gets.chomp.to_i)
-puts "\nWhat's the priority?"
-task.priority= (gets.chomp)
-
-task_list << task
-end
-p task_list
-
-puts "\nHere's your list:"
-
-task_list.each do |task|
-puts "#{task.name} ::: Priority: #{task.priority} ::: State of Mind: #{task.mindstate} ::: Time est: #{task.time_est}"
-end
