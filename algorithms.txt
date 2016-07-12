@@ -6,7 +6,7 @@ RELEASE 0:
 		-Ask human “Which floor would you like to go to?”
 		-wait 5 seconds for a response
 	-If no response heard:
-		-exit elevator
+		-take no action
 
 RELEASE 1:
 

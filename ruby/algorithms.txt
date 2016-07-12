@@ -6,7 +6,7 @@ RELEASE 0:
 		-Ask human “Which floor would you like to go to?”
 		-wait 5 seconds for a response
 	-If no response heard:
-		-exit elevator
+		-take no action
 
 RELEASE 1:
 
@@ -19,7 +19,7 @@ WASHING LAUNDRY:
 	- unscrew top of detergent bottle
 	- pour exactly 1/2 cup of detergent into cap of detergent bottle
 	- pour detergent into washer
-	- set washer to cold water cycle, large load by moving dial on front of 		washer
+	- set washer to cold water cycle, large load by moving dial on front of	washer
 - Until laundry basket is empty:
 	- pull clothes out of basket
 	- place in washer

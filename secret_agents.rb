@@ -1,3 +1,5 @@
+
+
 # ask for user input
 puts "Please enter your password:"
 $random_word = gets.chomp

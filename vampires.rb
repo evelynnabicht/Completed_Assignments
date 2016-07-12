@@ -1,48 +1,64 @@
-puts "How many employees will be processed?"
-employees = gets.chomp
+#Creating a survey for vampire employees
 
-employees.times do 
-  
+require 'date'
+current_year = Date.today.year
+current_year = current_year.to_i
 
+count = 0
+puts "How many employees will you be enrolling?"
+num_of_employees = gets.chomp.to_i
+
+while count < num_of_employees
+puts ""
+
+#Retrieving data
 
 puts "What is your name?"
-name = gets.chomp
+name = gets.chomp.split(" ").map(&:capitalize).join(" ")
 
 puts "How old are you?"
-age = gets.chomp
+age = gets.chomp.to_i
 
 puts "What year were you born?"
-input = gets.chomp
-
+year = gets.chomp.to_i
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
-order = gets.chomp
+garlic_bread = gets.chomp
 
 puts "Would you like to enroll in the company's health insurance?"
-insurance = gets.chomp
+health_insurance = gets.chomp
 
-if 
-  age_right && (likes_garlic || wants_insurance)
+#Testing Data
 
-  puts "Probably not a vampire."
+if age == current_year - year && (garlic_bread == "yes" || health_insurance == "yes")
+    puts "Probably not a vampire."
+  elsif age != current_year - year && (garlic_bread == "no" || health_insurance == "no")
+    puts "Probably a vampire."
+  elsif age != current_year - year && (garlic_bread == "no" && health_insurance == "no")
+    puts "Almost certainly a vampire"
+  elsif name == "Drake Cula" || name == "Tu Fang"
+    puts "Definitely a vampire"
+  else
+    puts "Results inconclusive"
+end
 
-elsif 
-  age_wrong && (no_garlic || no_insurance)
+#checking for allergies
 
-  puts "Probably a vampire" 
+allergies = "sunshine"
+user_input = " "
+puts "Please list all your allergies and write 'Done' when you are done listing."
+while user_input != "sunshine"
+user_input = gets.chomp.downcase
+break if user_input == "done"
+end
 
-elsif
-  age_wrong && no_garlic && no_insurance
+if user_input == "sunshine"
+  puts "Probably a vampire."
+end
 
-  puts "Almost certainly a vampire."
+count += 1
+end
 
-elsif
-  name = "Drake Cula" || "Tu Fang"
+#Ending
 
-  puts "definitely a vampire"
-
-else
-  puts "Results Inconclusive"
-
-
-  end
+puts "Actually, nevermind! What do these questions have to do with anything? Let's all be friends."
